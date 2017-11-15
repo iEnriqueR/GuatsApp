@@ -21,4 +21,90 @@ import javax.persistence.ManyToOne;
 @Table(name="usuario", catalog="mydb")
 public class Usuario {
     
+    @Id @GeneratedValue
+    @Column(name="idUsuario")
+    private int idUsuario;
+    
+    @Column(name="nombre")
+    private String nombre;
+    
+    @Column(name="apellido")
+    private String apellido;
+    
+    @Column(name="usuario")
+    private String usuario;
+    
+    @Column(name="contraseña")
+    private String contraseña;
+
+    /**
+     * @return the idUsuario
+     */
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    /**
+     * @param idUsuario the idUsuario to set
+     */
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the apellido
+     */
+    public String getApellido() {
+        return apellido;
+    }
+
+    /**
+     * @param apellido the apellido to set
+     */
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    /**
+     * @return the usuario
+     */
+    public String getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    /**
+     * @return the contraseña
+     */
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    /**
+     * @param contraseña the contraseña to set
+     */
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }   
+    
 }
