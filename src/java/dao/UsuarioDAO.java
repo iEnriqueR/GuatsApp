@@ -18,7 +18,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.json.JSONArray;
-import pojo.Mensaje;
+import pojo.Usuario;
 import java.util.List;
 import org.hibernate.type.StandardBasicTypes;
 import org.json.JSONObject;
@@ -27,41 +27,30 @@ import org.json.JSONObject;
  *
  * @author Enrique
  */
-public class MensajeDAO {
+public class UsuarioDAO {
     Session sesion;
     
-    public MensajeDAO(){
+    public UsuarioDAO(){
         sesion = HibernateUtil.getLocalSession();
     }
     
-    public JSONObject getMensajeById(int id){
-        JSONObject jm = new JSONObject();
-        Mensaje m = (Mensaje)sesion.createCriteria(Mensaje.class)
-                .add(Restrictions.eq("idMensaje",id));
-        return jm;
+    public Usuario logUsuario(String usuario, String pass){
+        return (Usuario)sesion.createCriteria(Usuario.class)
+                .add(Restrictions.eq("usuario", usuario))
+                .add(Restrictions.eq("contrasena", pass)).uniqueResult();
     }
     
-    public boolean saveMensaje(int idChat, String contenido){
+    public boolean saveUsuario(String nombre, String apellido,
+            String usuario, String pass){        
         try{
             Transaction transaccion=sesion.beginTransaction();
-            sesion.save(new Mensaje(idChat, contenido));
+            sesion.save(new Usuario(nombre, apellido, usuario, pass));
             transaccion.commit();
             return true;
         }catch(Exception e){
-            
+            return false;     
         }finally{
             HibernateUtil.closeLocalSession();
-        }
-        return false;
+        }               
     }
-    
-    public Mensaje getMensajeByIdChat(int idChat){
-        boolean hayMensaje = true;
-        if(hayMensaje)
-            return new Mensaje();
-        else{
-            return null;
-        }
-    }
-    
 }

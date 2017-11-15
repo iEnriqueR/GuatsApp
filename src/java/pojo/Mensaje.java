@@ -5,6 +5,8 @@
  */
 package pojo;
 
+import java.time.LocalDate;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -21,4 +23,13 @@ import javax.persistence.ManyToOne;
 @Table(name="mensaje", catalog="mydb")
 public class Mensaje {
     
+    public Mensaje(int idChat, String contenido){
+        LocalDate ld = LocalDate.now();
+        //Date fechaActual = LocalDate.;
+        
+    }
+    
+    public Mensaje(){
+        
+    }
 }

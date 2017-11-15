@@ -21,4 +21,8 @@ import javax.persistence.ManyToOne;
 @Table(name="chat", catalog="mydb")
 public class Chat {
     
+    
+    public Chat(int idA, int idB){
+        
+    }
 }

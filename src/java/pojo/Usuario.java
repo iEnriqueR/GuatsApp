@@ -21,4 +21,8 @@ import javax.persistence.ManyToOne;
 @Table(name="usuario", catalog="mydb")
 public class Usuario {
     
+    public Usuario(String nombre, String apellido,
+            String usuario, String pass){
+        
+    }    
 }
