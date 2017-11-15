@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ChatOs</title>
+    <title>Inicio Sesion - ChatOs</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,19 +27,15 @@
 </head>
 
 <body id="page-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">ChatOs</a>
+            <a class="navbar-brand js-scroll-trigger" href="index.html">ChatOs</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="inicio-sesion.html">Inicio de Sesion</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="registro.html">Registro</a>
                     </li>
@@ -50,36 +46,28 @@
             </div>
         </div>
     </nav>
-
-    <header class="masthead text-center text-white d-flex">
-        <div class="container my-auto">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase">
-                        <strong>CHATOS EL MEJOR PROVEEDOR DE CHAT</strong>
-                    </h1>
-                    <hr>
-                </div>
-                <div class="col-lg-8 mx-auto">
-                    <p class="text-faded mb-5">Tu poderoso aliado en comunicacion. Nosotros no compartiremos tus datos #Google</p>
-                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="registro.html">Registro :D </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="bg-primary" id="about">
-        <div class="container">
+    <section class="bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Inicio Sesion!</h2>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-heading text-white">Inicia Sesion y Comunicate!</h2>
-                    <hr class="light my-4">
-                    <p class="text-faded mb-4">EL proveedor de chat numero 1 en la television humoristica </p>
-                    <a class="btn btn-light btn-xl js-scroll-trigger" href="inicio-sesion.html">Inicia Sesion!</a>
+                    <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Usuario:</label>
+                            <input type="name" class="form-control input" id="exampleInputEmail1" placeholder="Ingresa tu nombre de usuario">
+                            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus datos con nadie mas.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-light btn-xl sr-button btn btn-primary">Enviar</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="contact">
         <div class="container">
