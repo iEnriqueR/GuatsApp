@@ -43,8 +43,9 @@ public class MensajeDAO {
     
     public boolean saveMensaje(int idChat, String contenido){
         try{
+            ChatDAO dao = new ChatDAO();            
             Transaction transaccion=sesion.beginTransaction();
-            sesion.save(new Mensaje(idChat, contenido));
+            sesion.save(new Mensaje(dao.getChatById(idChat), contenido));
             transaccion.commit();
             return true;
         }catch(Exception e){
@@ -57,8 +58,9 @@ public class MensajeDAO {
     
     public Mensaje getMensajeByIdChat(int idChat){
         boolean hayMensaje = true;
+        ChatDAO dao = new ChatDAO(); 
         if(hayMensaje)
-            return new Mensaje();
+            return new Mensaje(dao.getChatById(idChat), "holiwi dijo el kiwi");
         else{
             return null;
         }

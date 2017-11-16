@@ -9,34 +9,29 @@ import hbm.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-import pojo.Chat;
+import pojo.Contacto;
 
 /**
  *
  * @author Enrique
  */
-public class ChatDAO {
+public class ContactoDAO {
     Session sesion;
     
-    public ChatDAO(){
+    public ContactoDAO(){
         sesion = HibernateUtil.getLocalSession();
     }
     
-    public Chat getChatByIds(int idA, int idB){
-        return (Chat)sesion.createCriteria(Chat.class)
-                .add(Restrictions.eq("idA", idA))
-                .add(Restrictions.eq("idB", idB)).uniqueResult();
-    }
+//    public Chat getChatByIds(int idA, int idB){
+//        return (Chat)sesion.createCriteria(Chat.class)
+//                .add(Restrictions.eq("idA", idA))
+//                .add(Restrictions.eq("idB", idB)).uniqueResult();
+//    }
     
-    public Chat getChatById(int id){
-        return (Chat)sesion.createCriteria(Chat.class)
-                .add(Restrictions.eq("idChat", id));
-    }
-    
-    public boolean saveChat(int idA, int idB){
+    public boolean saveChat(int idD, int idC){
         try{
             Transaction transaccion=sesion.beginTransaction();
-            sesion.save(new Chat(idA, idB));
+            sesion.save(new Contacto(idD, idC));
             transaccion.commit();
             return true;
         }catch(Exception e){

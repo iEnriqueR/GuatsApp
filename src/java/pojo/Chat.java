@@ -5,6 +5,7 @@
  */
 package pojo;
 
+import dao.UsuarioDAO;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -18,11 +19,68 @@ import javax.persistence.ManyToOne;
  * @author Enrique
  */
 @Entity
-@Table(name="chat", catalog="mydb")
+@Table(name="chat", catalog="guatsapp")
 public class Chat {
     
+    @Id @GeneratedValue
+    @Column(name="idChat")
+    private int idChat;
+    
+    @ManyToOne
+    @JoinColumn(name="idUsuarioE")
+    private Usuario idUsuarioE;
+    
+    @ManyToOne
+    @JoinColumn(name="idUsuarioR")
+    private Usuario idUsuarioR;
     
     public Chat(int idA, int idB){
-        
+        UsuarioDAO dao = new UsuarioDAO();
+        setIdUsuarioE(dao.getUsuarioById(idA));
+        setIdUsuarioR(dao.getUsuarioById(idB));
     }
+
+    /**
+     * @return the idChat
+     */
+    public int getIdChat() {
+        return idChat;
+    }
+
+    /**
+     * @param idChat the idChat to set
+     */
+    public void setIdChat(int idChat) {
+        this.idChat = idChat;
+    }
+
+    /**
+     * @return the idUsuarioE
+     */
+    public Usuario getIdUsuarioC() {
+        return idUsuarioE;
+    }
+
+    /**
+     * @param idUsuarioC the idUsuarioE to set
+     */
+    public void setIdUsuarioE(Usuario idUsuarioC) {
+        this.idUsuarioE = idUsuarioC;
+    }
+
+    /**
+     * @return the idUsuarioR
+     */
+    public Usuario getIdUsuarioD() {
+        return idUsuarioR;
+    }
+
+    /**
+     * @param idUsuarioD the idUsuarioR to set
+     */
+    public void setIdUsuarioR(Usuario idUsuarioD) {
+        this.idUsuarioR = idUsuarioD;
+    }
+    
+    
 }

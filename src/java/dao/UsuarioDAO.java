@@ -40,6 +40,11 @@ public class UsuarioDAO {
                 .add(Restrictions.eq("contrasena", pass)).uniqueResult();
     }
     
+    public Usuario getUsuarioById(int id){
+        return (Usuario)sesion.createCriteria(Usuario.class)
+                .add(Restrictions.eq("idUsuario", id)).uniqueResult();
+    }
+    
     public boolean saveUsuario(String nombre, String apellido,
             String usuario, String pass){        
         try{

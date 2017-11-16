@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/hbm/HibernateUtil.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/dao/ChatDAO.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/dao/MensajeDAO.java</file>
             <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Chat.java</file>
             <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Contacto.java</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/cStatus.java</file>
             <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/index.html</file>
             <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Usuario.java</file>
             <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Mensaje.java</file>
         </group>
