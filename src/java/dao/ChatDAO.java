@@ -29,8 +29,9 @@ public class ChatDAO {
     }
     
     public Chat getChatById(int id){
-        return (Chat)sesion.createCriteria(Chat.class)
-                .add(Restrictions.eq("idChat", id));
+        Chat c = (Chat)sesion.createCriteria(Chat.class)
+                .add(Restrictions.eq("idChat", id)).uniqueResult();        
+        return c;
     }
     
     public boolean saveChat(int idA, int idB){

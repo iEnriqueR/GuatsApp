@@ -30,7 +30,7 @@ public class cStatus {
     private String nombre;
     
     public cStatus(){
-        setNombre("Washado");
+        
     }
     
     /**

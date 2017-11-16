@@ -39,6 +39,10 @@ public class Chat {
         setIdUsuarioE(dao.getUsuarioById(idA));
         setIdUsuarioR(dao.getUsuarioById(idB));
     }
+    
+    public Chat(){
+        
+    }
 
     /**
      * @return the idChat

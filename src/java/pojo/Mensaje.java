@@ -44,16 +44,15 @@ public class Mensaje {
     @JoinColumn(name="idStatus")
     private cStatus idStatus;
     
-    public Mensaje(Chat idChat, String contenido){
-        LocalDate ld = LocalDate.now();
-        
+    public Mensaje(Chat idChat, String contenido, cStatus idStatus){
         setIdChat(idChat);
-        System.out.println(idChat.getIdChat());
-        System.out.println(idChat.getIdUsuarioC());
-        System.out.println(idChat.getIdUsuarioD());
         setContenido(contenido);
-        setIdStatus(new cStatus());
+        setIdStatus(idStatus);
         setFecha(new Date());        
+    }
+    
+    public Mensaje(){
+        
     }
 
     /**

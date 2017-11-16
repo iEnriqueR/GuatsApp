@@ -52,6 +52,9 @@ public class TestDAOs {
          //uDao.saveUsuario("enrique2", "rivera2", "enri2", "2rivera321");
          
          //cDao.saveChat(uDao.getUsuarioById(1).getIdUsuario(), uDao.getUsuarioById(2).getIdUsuario());
-         mDao.saveMensaje(1, "holiwi dijo el kiwi");
+         //mDao.saveMensaje(1, "holiwi dijo el kiwi", 1);
+         //mDao.saveMensaje(1, 2, "holiwi dijo el kiwi");
+         //mDao.saveMensaje(cDao.getChatById(1), "holiwi dijo el kiwi");
+         //System.out.println(cDao.getChatById(1).getIdChat());
      }
 }

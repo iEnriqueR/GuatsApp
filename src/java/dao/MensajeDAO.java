@@ -22,6 +22,8 @@ import pojo.Mensaje;
 import java.util.List;
 import org.hibernate.type.StandardBasicTypes;
 import org.json.JSONObject;
+import pojo.Chat;
+import pojo.cStatus;
 
 /**
  *
@@ -41,11 +43,13 @@ public class MensajeDAO {
         return jm;
     }
     
-    public boolean saveMensaje(int idChat, String contenido){
+    public boolean saveMensaje(int idChat, String contenido, int idStatus){
         try{
-            ChatDAO dao = new ChatDAO();            
+            ChatDAO dao = new ChatDAO();        
+            Mensaje m = new Mensaje(dao.getChatById(idChat), contenido, 
+                    (cStatus)sesion.load(cStatus.class, idStatus));
             Transaction transaccion=sesion.beginTransaction();
-            sesion.save(new Mensaje(dao.getChatById(idChat), contenido));
+            sesion.save(m);
             transaccion.commit();
             return true;
         }catch(Exception e){
@@ -56,14 +60,46 @@ public class MensajeDAO {
         return false;
     }
     
-    public Mensaje getMensajeByIdChat(int idChat){
-        boolean hayMensaje = true;
-        ChatDAO dao = new ChatDAO(); 
-        if(hayMensaje)
-            return new Mensaje(dao.getChatById(idChat), "holiwi dijo el kiwi");
-        else{
-            return null;
-        }
-    }
-    
+//    public boolean saveMensaje(Chat idChat, String contenido){
+//        try{
+//            ChatDAO dao = new ChatDAO();        
+//            Mensaje m = new Mensaje(idChat, contenido);
+//            Transaction transaccion=sesion.beginTransaction();
+//            sesion.save(m);
+//            transaccion.commit();
+//            return true;
+//        }catch(Exception e){
+//            
+//        }finally{
+//            HibernateUtil.closeLocalSession();
+//        }
+//        return false;
+//    }
+//    
+//    public boolean saveMensaje(int idE, int idR, String contenido){
+//        try{
+//            ChatDAO dao = new ChatDAO();        
+//            Mensaje m = new Mensaje(dao.getChatByIds(idE, idR), contenido);
+//            Transaction transaccion=sesion.beginTransaction();
+//            sesion.save(m);
+//            transaccion.commit();
+//            return true;
+//        }catch(Exception e){
+//            
+//        }finally{
+//            HibernateUtil.closeLocalSession();
+//        }
+//        return false;
+//    }
+//    
+//    public Mensaje getMensajeByIdChat(int idChat){
+//        boolean hayMensaje = true;
+//        ChatDAO dao = new ChatDAO(); 
+//        if(hayMensaje)
+//            return new Mensaje(dao.getChatById(idChat), "holiwi dijo el kiwi");
+//        else{
+//            return null;
+//        }
+//    }
+//    
 }

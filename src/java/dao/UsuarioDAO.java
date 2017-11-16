@@ -40,6 +40,19 @@ public class UsuarioDAO {
                 .add(Restrictions.eq("contrasena", pass)).uniqueResult();
     }
     
+    public JSONArray listarContactos(){
+        List<Usuario> usuarios = (List)sesion.createCriteria(Usuario.class).list();
+        JSONArray retorno = new JSONArray();
+        JSONObject o;
+        for (int i = 0; i < usuarios.size(); i++) {
+            o = new JSONObject();
+            o.put("id", usuarios.get(i).getIdUsuario());
+            o.put("nombre", usuarios.get(i).getNombre());
+            retorno.put(o);
+        }
+        return retorno;
+    }
+    
     public Usuario getUsuarioById(int id){
         return (Usuario)sesion.createCriteria(Usuario.class)
                 .add(Restrictions.eq("idUsuario", id)).uniqueResult();
