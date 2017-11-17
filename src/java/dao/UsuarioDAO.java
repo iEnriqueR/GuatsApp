@@ -48,6 +48,7 @@ public class UsuarioDAO {
             o = new JSONObject();
             o.put("id", usuarios.get(i).getIdUsuario());
             o.put("nombre", usuarios.get(i).getNombre());
+            o.put("estado", "Disponible");
             retorno.put(o);
         }
         return retorno;

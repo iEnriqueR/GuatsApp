@@ -43,6 +43,29 @@ public class MensajeDAO {
         return jm;
     }
     
+    public JSONArray getConversacion(int idA, int idB){
+        ChatDAO cDao = new ChatDAO();
+        int idChatA, idChatB;
+        JSONArray retorno = new JSONArray();
+        JSONObject o;
+        
+        idChatA = cDao.getChatByIds(idA, idB).getIdChat();
+        idChatB = cDao.getChatByIds(idB, idA).getIdChat();
+        List<Mensaje> mensajes = (List)sesion.createCriteria(Mensaje.class)
+                .add(Restrictions.eq("idChat", idChatA))
+                .add(Restrictions.eq("idChat", idChatB))
+                .list();
+        
+        for (int i = 0; i < mensajes.size(); i++) {
+            o = new JSONObject();
+            o.put("id", mensajes.get(i).getIdChat());
+            o.put("contenido", mensajes.get(i).getContenido());
+            o.put("fecha", mensajes.get(i).getFecha());
+            o.put("status", mensajes.get(i).getIdStatus());
+            retorno.put(o);
+        }
+        return retorno;
+    }    
     public boolean saveMensaje(int idChat, String contenido, int idStatus){
         try{
             ChatDAO dao = new ChatDAO();        
