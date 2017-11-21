@@ -18,3 +18,7 @@ Integrantes del Equipo:
 * Michel Urrutia.
 
 Agradecimiento a Rigoberto Alvarez.
+
+
+######Este programa es ajeno a cualquier partido politico , queda estrictamente prohibido los usos distintos a los descritos en el progama.
+
