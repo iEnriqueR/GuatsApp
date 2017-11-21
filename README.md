@@ -14,6 +14,7 @@ Integrantes del Equipo:
 * Citlali Hernandez
 * Pablo Escoto 
 * Said Pimienta
+* Hugo Merino
 * Michel Urrutia.
 
 Agradecimiento a Rigoberto Alvarez.
