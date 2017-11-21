@@ -13,7 +13,7 @@ Integrantes del Equipo:
 * Enrique Rivera
 * Citlali Hernandez
 * Pablo Escoto 
-* Said Pimienta
+* [Said Pimienta](https://www.linkedin.com/in/luis-said-pimienta-193730109/) 
 * Hugo Merino
 * Michel Urrutia.
 
