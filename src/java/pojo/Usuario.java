@@ -106,17 +106,17 @@ public class Usuario {
     }
 
     /**
-     * @return the contraseña
+     * @return the contrasena
      */
     public String getContrasena() {
         return contrasena;
     }
 
     /**
-     * @param contraseña the contraseña to set
+     * @param contrasena the contrasena to set
      */
-    public void setContrasena(String contraseña) {
-        this.contrasena = contraseña;
-    }   
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
     
 }

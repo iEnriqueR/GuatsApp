@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="js/Login.js"></script>
 
     <title>Registro - ChatOs</title>
 
@@ -51,32 +52,32 @@
             <h2 class="mb-4 text-white">Registro</h2>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center text-white">
-                    <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                    <form id="contact_form" method="POST" enctype="multipart/form-data">
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Nombre: </label>
+                            <label class="col-sm-2 col-form-label" >Nombre: </label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Ingresa tu nombre">
+                                <input type="text" class="form-control" placeholder="Ingresa tu nombre" id="nombre">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Apellido: </label>
+                            <label class="col-sm-2 col-form-label" >Apellido: </label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Ingresa tu apellido">
+                                <input type="text" class="form-control" placeholder="Ingresa tu apellido" id="apellido">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Usuario: </label>
+                            <label class="col-sm-2 col-form-label" >Usuario: </label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Ingresa un nombre de usuario">
+                                <input type="text" class="form-control" placeholder="Ingresa un nombre de usuario" id="usuario">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Password: </label>
+                            <label class="col-sm-2 col-form-label" >Password: </label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" placeholder="Ingresa tu password">
+                                <input type="password" class="form-control" placeholder="Ingresa tu password" id="contrasena">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-light btn-xl js-scroll-trigger">¡Enviar mi registro!</button>
+                        <button onclick="login()" class="btn btn-light btn-xl js-scroll-trigger" >¡Enviar mi registro!</button>
                     </form>
                 </div>
             </div>
@@ -120,6 +121,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    
 
 </body>
 

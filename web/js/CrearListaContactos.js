@@ -5,7 +5,7 @@
  */
 
 
-var Listacontactos = "<li class=\"active bounceInDown\" id=\"{id}\" onclick=\"cambio(this)\">\n" +
+var Listacontactos = "<li class=\"active bounceInDown\" id=\"{id}\" onclick=\"obtenerChat(this)\">\n" +
         "                	<a href=\"#\" class=\"clearfix\">\n" +
         "                		<img src=\"https://bootdey.com/img/Content/user_1.jpg\" alt=\"\" class=\"img-circle\">\n" +
         "                		<div class=\"friend-name\">	\n" +
@@ -18,7 +18,7 @@ var Listacontactos = "<li class=\"active bounceInDown\" id=\"{id}\" onclick=\"ca
         "                </li>";
 
 
-function upDateChat() {
+function crearListaContactos() {
 
     $.get("ObtenerContactos",
             function (contactos) {

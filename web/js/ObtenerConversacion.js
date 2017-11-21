@@ -36,7 +36,7 @@ var moldeIzquierdo = "<li class=\"left clearfix\">\n" +
 //        "                                </div>\n" +
 //        "                            </li> ";
 
-function updateMensaje() {
+function obtenerConversacion() {
     //var idB=document.getElementById(idB);
 
     //var mensaje=document.getElementById(mensaje);

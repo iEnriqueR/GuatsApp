@@ -14,13 +14,14 @@
         -->
         <title>ChatOs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--        <script src="js/jquery-1.12.4.js"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/chat-style.css">
         <link rel="stylesheet" href="css/scroll.css">
     </head>
 
-    <body onload="upDateChat(), updateMensaje()">
+    <body onload="crearListaContactos()">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <div class="container bootstrap snippet">
             <div class="row">
@@ -48,9 +49,9 @@
                             </ul>
                         </div>
                         <div class="input-group">
-                            <input class="form-control border no-shadow no-rounded" placeholder="Escribe tu mensaje aqui">
+                            <input class="form-control border no-shadow no-rounded" name="campoMensaje" id="campoMensaje" placeholder="Escribe tu mensaje aqui">
                             <span class="input-group-btn">
-                                <button class="btn btn-danger no-rounded" type="button">Enviar</button>
+                                <button class="btn btn-danger no-rounded" onclick="enviarMensaje()">Enviar</button>
                             </span>
                         </div>
                         <!-- /input-group -->
@@ -64,6 +65,8 @@
         <script src="js/ObtenerConversacion.js"></script>
         <script src="js/CrearListaContactos.js"></script>
         <script src="js/obtenerChat.js"></script>
+        <script src="js/ObtenerIdLocal.js"></script>        
+        <script src="js/EnviarMensaje.js"></script>        
         <script type="text/javascript">
         </script>
     </body>

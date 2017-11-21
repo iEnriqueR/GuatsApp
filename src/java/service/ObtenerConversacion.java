@@ -10,9 +10,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.json.JSONArray;
 
 /**
@@ -31,17 +33,28 @@ public class ObtenerConversacion extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         MensajeDAO mDao = new MensajeDAO();
         JSONArray mensajes;
+        HttpSession sesion = request.getSession();
         int idE, idR;
-        idE = Integer.parseInt(request.getParameter("emisor"));
+        idE = (int)sesion.getAttribute("idLocal");
         idR = Integer.parseInt(request.getParameter("destinatario"));
+        sesion.setAttribute("idDestinatario", idR);
+        //****cookieasdasdasd\
+        Cookie loginCookie = new Cookie("idDestinatario", request.getParameter("destinatario"));
+			//setting cookie to expiry in 30 mins
+			loginCookie.setMaxAge(30*60);
+			response.addCookie(loginCookie);
+        //*****
         response.setContentType("application/json utf-8");
         PrintWriter out = response.getWriter();
-        //mensajes = mDao.getConversacion(idE, idR);
-        mensajes = mDao.getConversacion(1, 2);
+        System.out.println("IdE: " + idE);
+        System.out.println("IdR: " + idR);
+        mensajes = mDao.getConversacion(idE, idR);
+        //mensajes = mDao.getConversacion((int)sesion.getAttribute("idLocal"), 2);
+        System.out.println(mensajes.toString());
         out.print(mensajes.toString());
         destroy();
     }

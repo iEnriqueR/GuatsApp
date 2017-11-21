@@ -40,6 +40,11 @@ public class Chat {
         setIdUsuarioR(dao.getUsuarioById(idB));
     }
     
+    public Chat(Usuario idA, Usuario idB){
+        setIdUsuarioE(idA);
+        setIdUsuarioR(idB);
+    }
+    
     public Chat(){
         
     }
@@ -61,30 +66,28 @@ public class Chat {
     /**
      * @return the idUsuarioE
      */
-    public Usuario getIdUsuarioC() {
+    public Usuario getIdUsuarioE() {
         return idUsuarioE;
     }
 
     /**
-     * @param idUsuarioC the idUsuarioE to set
+     * @param idUsuarioE the idUsuarioE to set
      */
-    public void setIdUsuarioE(Usuario idUsuarioC) {
-        this.idUsuarioE = idUsuarioC;
+    public void setIdUsuarioE(Usuario idUsuarioE) {
+        this.idUsuarioE = idUsuarioE;
     }
 
     /**
      * @return the idUsuarioR
      */
-    public Usuario getIdUsuarioD() {
+    public Usuario getIdUsuarioR() {
         return idUsuarioR;
     }
 
     /**
-     * @param idUsuarioD the idUsuarioR to set
+     * @param idUsuarioR the idUsuarioR to set
      */
-    public void setIdUsuarioR(Usuario idUsuarioD) {
-        this.idUsuarioR = idUsuarioD;
+    public void setIdUsuarioR(Usuario idUsuarioR) {
+        this.idUsuarioR = idUsuarioR;
     }
-    
-    
 }

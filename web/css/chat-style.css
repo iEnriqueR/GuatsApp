@@ -74,16 +74,16 @@ small,
 }
 
 .chat-message {
-    padding: 60px 20px 115px;
+    padding: 20px 0px 20px 10px;
 }
 
 .chat {
     list-style: none;
-    margin: 0;
+    margin: 20px;
 }
 
 .chat-message {
-    background: #f9f9f9;
+    background: gray;
 }
 
 .chat li img {
