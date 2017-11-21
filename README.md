@@ -10,10 +10,10 @@ Bootstrap, Html y Css para la parte de frontend.
 
 Integrantes del Equipo:
 
-*Enrique Rivera
-*Citlali Hernandez
-*Pablo Escoto 
-*Said Pimienta
-*Michel Urrutia.
+* Enrique Rivera
+* Citlali Hernandez
+* Pablo Escoto 
+* Said Pimienta
+* Michel Urrutia.
 
 Agradecimiento a Rigoberto Alvarez.
