@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+        <!--  All snippets are MIT license http://bootdey.com/license -->
+        <!-- 
+            The codes are free, but we require linking to our web site.
+            Why to Link?
+            A true story: one girl didn't set a link and had no decent date for two years, and another guy set a link and got a top ranking in Google! 
+            Where to Put the Link?
+            home, about, credits... or in a good page that you want
+            THANK YOU MY FRIEND!
+        -->
+        <title>ChatOs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/chat-style.css">
+        <link rel="stylesheet" href="css/scroll.css">
+    </head>
+
+    <body onload="upDateChat(), updateMensaje()">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <div class="container bootstrap snippet">
+            <div class="row">
+                <div class="col-md-4 bg-white ">
+                    <div class="row border-bottom padding-sm text-center" style="height: 70px;">
+                        <h2>Mis Contactos</h2>
+                    </div>
+
+                    <!--Aqui inicia nuestra lista de contactos-->
+                    <div data-offset="0" class="scrollspy">
+                        <ul class="friend-list" id="aquiVanContactos">
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Aqui se muestra el chat de nuestro contacto seleccionado-->
+                <div class="col-md-8 bg-white">
+                    <div class="chat-message">
+                        <div class="scrollspy">
+                            <ul class="chat" id="aquiVanMensajes">
+
+                                
+                            </ul>
+                        </div>
+                        <div class="input-group">
+                            <input class="form-control border no-shadow no-rounded" placeholder="Escribe tu mensaje aqui">
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger no-rounded" type="button">Enviar</button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="js/ObtenerConversacion.js"></script>
+        <script src="js/CrearListaContactos.js"></script>
+        <script src="js/obtenerChat.js"></script>
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>
