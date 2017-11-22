@@ -5,14 +5,14 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydb?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/guatsapp?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">___</property>
+    <property name="hibernate.connection.password">rivera123</property>
     
-    <mapping class="Usuario"></mapping>
-    <mapping class="Chat"></mapping>
-    <mapping class="Mensaje"></mapping>
-    <mapping class="Contacto"></mapping>
-    <mapping class="cStatus"></mapping>
+    <mapping class="pojo.Usuario"></mapping>
+    <mapping class="pojo.Chat"></mapping>
+    <mapping class="pojo.Mensaje"></mapping>
+    <mapping class="pojo.Contacto"></mapping>
+    <mapping class="pojo.cStatus"></mapping>
   </session-factory>
 </hibernate-configuration>

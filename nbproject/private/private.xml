@@ -3,13 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Chat.java</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Contacto.java</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/cStatus.java</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/index.html</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Usuario.java</file>
-            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/pojo/Mensaje.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/js/ValidarLogin.js</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/dao/ChatDAO.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/js/obtenerChat.js</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/inicio-sesion2.html</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/service/ObtenerConversacion.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/registro2.html</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/chat2.html</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/index2.html</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/dao/MensajeDAO.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/service/ValidarLogin.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/js/CrearListaContactos.js</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/service/ObtenerContactos.java</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/js/ObtenerConversacion.js</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/web/js/EnviarMensaje.js</file>
+            <file>file:/C:/Users/Enrique/Documents/NetBeansProjects/Guatsapp/src/java/service/GuardarMensaje.java</file>
         </group>
     </open-files>
 </project-private>
