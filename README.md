@@ -9,6 +9,10 @@ gracias a la tecnologia de git hub.
 Utilizando Tecnologia Hibernate, Ajax, Mysql y Java Enterprise en la parte Backend.
 Bootstrap, Html y Css para la parte de frontend.
 
+![Github Logo](/images/logo.png)
+Format : ![Alt Text](https://imgur.com/cTmQ7xp)
+
+
 - [x] Pagina Principal 
 - [x] Inicio de Sesion
 - [x] Registro de Sesion.
