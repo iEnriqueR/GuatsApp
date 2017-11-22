@@ -64,8 +64,8 @@ public class MensajeDAO {
         c2 = cDao.getChatByIds(idB, idA);
         idChatA = c1.getIdChat();
         idChatB = c2.getIdChat();
-        System.out.println(idChatA);
-        System.out.println(idChatB);
+        //System.out.println(idChatA);
+        //System.out.println(idChatB);
         //****conversacion
         List<Mensaje> mensajes = (List) sesion.createCriteria(Mensaje.class)
                 .add(Restrictions.eq("idChat", c1))
@@ -89,24 +89,27 @@ public class MensajeDAO {
             long diffInSeconds = TimeUnit.MILLISECONDS.toSeconds(diff);
             long diffInMinutes = TimeUnit.MILLISECONDS.toMinutes(diff);
             long diffInHours = TimeUnit.MILLISECONDS.toHours(diff);
-            String dif = "no jalo";
-            System.out.println(diff);
-            System.out.println(diffInMinutes);
-            System.out.println(diffInHours);
-//            if (diffInDays > 1) {
-//                dif = diffInDays + " days";
-//                System.err.println(dif);
-//            } else
-                if (diffInHours > 24) {
-                dif = diffInHours + " hours";
-                System.err.println(dif);
-            } else if ((diffInHours == 24) && (diffInMinutes >= 1)) {
-                dif = diffInMinutes + "minutes";
-                System.err.println(dif);
-            }            
+            String dif;
+//            System.out.println("dif total " + diff);
+//            System.out.println("dif segs " + diffInSeconds);
+//            System.out.println("dif min " + diffInMinutes);
+//            System.out.println("dif hr " + diffInHours);
+            if(diffInHours > 1){
+               dif = diffInHours + " hours";
+                //System.err.println(dif); 
+            } 
+            else{
+                if((diffInMinutes/60) >= 60){
+                    dif = (diffInMinutes/60)  + " minutes";
+                    //System.err.println(dif);  
+                }
+                else{
+                    dif = (diffInSeconds/60)  + " seconds";
+                    //System.err.println(dif); 
+                }
+            }          
             //****
             o.put("ago", dif);
-            System.out.println(mensajes.get(i).getFecha().compareTo(new Date()));
             if(mensajes.get(i).getIdChat().getIdChat() == idChatA){
                 o.put("identacion", true);
             }
@@ -131,52 +134,8 @@ public class MensajeDAO {
         } catch (Exception e) {
 
         } finally {
-            //HibernateUtil.closeLocalSession();
+            HibernateUtil.closeLocalSession();
         }
         return false;
     }
-
-//    public boolean saveMensaje(Chat idChat, String contenido){
-//        try{
-//            ChatDAO dao = new ChatDAO();        
-//            Mensaje m = new Mensaje(idChat, contenido);
-//            Transaction transaccion=sesion.beginTransaction();
-//            sesion.save(m);
-//            transaccion.commit();
-//            return true;
-//        }catch(Exception e){
-//            
-//        }finally{
-//            HibernateUtil.closeLocalSession();
-//        }
-//        return false;
-//    }
-//    
-//    public boolean saveMensaje(int idE, int idR, String contenido){
-//        try{
-//            ChatDAO dao = new ChatDAO();        
-//            Mensaje m = new Mensaje(dao.getChatByIds(idE, idR), contenido);
-//            Transaction transaccion=sesion.beginTransaction();
-//            sesion.save(m);
-//            transaccion.commit();
-//            return true;
-//        }catch(Exception e){
-//            
-//        }finally{
-//            HibernateUtil.closeLocalSession();
-//        }
-//        return false;
-//    }
-//    
-//    public Mensaje getMensajeByIdChat(int idChat){
-//        boolean hayMensaje = true;
-//        ChatDAO dao = new ChatDAO(); 
-//        if(hayMensaje)
-//            return new Mensaje(dao.getChatById(idChat), "holiwi dijo el kiwi");
-//        else{
-//            return null;
-//        }
-//    }
-//    
-    
 }

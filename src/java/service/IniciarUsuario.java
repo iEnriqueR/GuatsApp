@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,6 +38,9 @@ public class IniciarUsuario extends HttpServlet {
         System.out.println("Se guardo el id: " + id);
         HttpSession sesion = request.getSession();
         sesion.setAttribute("idLocal", id);
+        Cookie loginCookie = new Cookie("idLocal", request.getParameter("id"));        
+	loginCookie.setMaxAge(30*60);
+        response.addCookie(loginCookie);
     }
     /**
      * Handles the HTTP <code>POST</code> method.

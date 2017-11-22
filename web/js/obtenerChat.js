@@ -36,15 +36,14 @@ var moldeDerecho = "<li class=\"right clearfix\">\n" +
         "                                </div>\n" +
         "                            </li> ";
 
-function obtenerChat(contacto){
-    var destinatario = contacto.id;
+function aiax(destinatario){
     document.getElementById("aquiVanMensajes").innerHTML = "";
     $.post("ObtenerConversacion",
     {
         destinatario: destinatario
     },
     function(mensajes){
-        
+        document.getElementById("aquiVanMensajes").innerHTML = "";
         mensajes.forEach(function (mensaje) {
                     console.log(mensaje);                    
                     var moldeIzq = moldeIzquierdo;
@@ -65,5 +64,12 @@ function obtenerChat(contacto){
                 });
     }
     );
+}
+
+function obtenerChat(contacto){
+    var destinatario = contacto.id;
+    document.getElementById("aquiVanMensajes").innerHTML = "";
+    aiax(destinatario);
+    setInterval(aiax(destinatario), 1);
 }
 

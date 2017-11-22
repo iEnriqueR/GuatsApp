@@ -51,7 +51,7 @@ public class ChatDAO {
         }catch(Exception e){
             return false;     
         }finally{
-            //HibernateUtil.closeLocalSession();
+            HibernateUtil.closeLocalSession();
         } 
     }
 }
