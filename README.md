@@ -9,13 +9,13 @@ gracias a la tecnologia de git hub.
 Utilizando Tecnologia Hibernate, Ajax, Mysql y Java Enterprise en la parte Backend.
 Bootstrap, Html y Css para la parte de frontend.
 
-![Github Logo](https://github.com/iEnriqueR/GuatsApp/blob/NewFront/web/img/Screenshot%20from%202017-11-21%2018-00-31.png)
-Format : ![Alt Text](https://imgur.com/cTmQ7xp)
-
-
 - [x] Pagina Principal 
+![Pagina Principal](https://github.com/iEnriqueR/GuatsApp/blob/NewFront/web/img/Screenshot%20from%202017-11-21%2018-00-31.png)
 - [x] Inicio de Sesion
+![Inicio de Sesion](https://github.com/iEnriqueR/GuatsApp/blob/NewFront/web/img/Screenshot%20from%202017-11-21%2018-00-42.png)
 - [x] Registro de Sesion.
+![Registro de Sesion](https://github.com/iEnriqueR/GuatsApp/blob/NewFront/web/img/Screenshot%20from%202017-11-21%2018-00-50.png)
+
 
 
 Integrantes del Equipo:
